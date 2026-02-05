@@ -1,22 +1,23 @@
-package App;
+package app;
 
-import Model.*;
-import Services.DisplayStatsServices;
-import Services.MatchServices;
-import Services.TeamServices;
-import Services.TournamentServices;
+import model.*;
+import services.*;
 
 public class Main {
     public static void main(String[] args) {
-        TournamentServices pkl = new TournamentServices();
+
+        Tournament pkl = new Tournament();
+        TournamentServices pklServices = new TournamentServices();
         DisplayStatsServices displayStandingsServices = new DisplayStatsServices();
-        MatchServices matchServices = new MatchServices();
+        MatchServices leagueMatchServices = new LeagueMatchServices();
         TeamServices teamServices = new TeamServices();
 
-        Team uMumba = pkl.createTeam("U Mumba");
-        Team dabangDelhi = pkl.createTeam("Dabang Delhi KC");
-        Team teluguTitans = pkl.createTeam("Telugu Titans");
-        Team tamilThalaivas = pkl.createTeam("Tamil Thalaivas");
+        Team uMumba = pklServices.createTeam(pkl,"U Mumba");
+        Team dabangDelhi = pklServices.createTeam(pkl,"Dabang Delhi KC");
+        Team teluguTitans = pklServices.createTeam(pkl,"Telugu Titans");
+        Team tamilThalaivas = pklServices.createTeam(pkl,"Tamil Thalaivas");
+
+        pklServices.displayTeams(pkl);
 
         teamServices.createPlayers(uMumba, "Ajith Chauhan", Role.raider, uMumba.getTeamName());
         teamServices.createPlayers(uMumba, "Sandeep Kumar", Role.raider, uMumba.getTeamName());
@@ -55,14 +56,14 @@ public class Main {
         teamServices.displayPlayers(teluguTitans);
         teamServices.displayPlayers(tamilThalaivas);
 
-        Match match1 = pkl.createMatch(uMumba, dabangDelhi);
-        matchServices.addRaid(match1, RaidOutCome.successfull, "U Mumba", 4, teamServices.getPlayerByName(uMumba, "Ajith Chauhan"));
-        matchServices.addRaid(match1, RaidOutCome.successfull, "Dabang Delhi KC", 5, teamServices.getPlayerByName(dabangDelhi, "Ashu Malik"));
-        matchServices.addRaid(match1, RaidOutCome.successfull, "U Mumba", 1, teamServices.getPlayerByName(uMumba, "Sandeep Kumar"));
-        matchServices.addRaid(match1, RaidOutCome.successfull, "Dabang Delhi KC", 2, teamServices.getPlayerByName(dabangDelhi, "Neeraj Narwal"));
-        matchServices.addRaid(match1, RaidOutCome.successfull, "U Mumba", 1, teamServices.getPlayerByName(uMumba, "Amir Mohammed Zafardanish"));
-        matchServices.addRaid(match1, RaidOutCome.unsuccessfull, "Dabang Delhi KC", 1, teamServices.getPlayerByName(uMumba, "Sunil Kumar"));
-        matchServices.endMatch(match1);
+        Match match1 = pklServices.createMatch(pkl,uMumba, dabangDelhi);
+        leagueMatchServices.addRaid(match1, RaidOutCome.successfull, "U Mumba", 4, teamServices.getPlayerByName(uMumba, "Ajith Chauhan"));
+        leagueMatchServices.addRaid(match1, RaidOutCome.successfull, "Dabang Delhi KC", 5, teamServices.getPlayerByName(dabangDelhi, "Ashu Malik"));
+        leagueMatchServices.addRaid(match1, RaidOutCome.successfull, "U Mumba", 2, teamServices.getPlayerByName(uMumba, "Sandeep Kumar"));
+        leagueMatchServices.addRaid(match1, RaidOutCome.successfull, "Dabang Delhi KC", 2, teamServices.getPlayerByName(dabangDelhi, "Neeraj Narwal"));
+        leagueMatchServices.addRaid(match1, RaidOutCome.successfull, "U Mumba", 1, teamServices.getPlayerByName(uMumba, "Amir Mohammed Zafardanish"));
+        leagueMatchServices.addRaid(match1, RaidOutCome.unsuccessfull, "Dabang Delhi KC", 1, teamServices.getPlayerByName(uMumba, "Sunil Kumar"));
+        leagueMatchServices.endMatch(match1);
 
         displayStandingsServices.displayStandings(pkl.getTeams());
         displayStandingsServices.displayStats(pkl.getTeams());

@@ -1,8 +1,8 @@
-package Services;
+package services;
 
-import Model.Player;
-import Model.Role;
-import Model.Team;
+import model.Player;
+import model.Role;
+import model.Team;
 
 import java.util.ArrayList;
 

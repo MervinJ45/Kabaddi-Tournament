@@ -1,6 +1,6 @@
-package Services;
+package services;
 
-import Model.Player;
+import model.Player;
 
 public class PlayerServices {
     public void increaseRaidPoint(Player player, int pointsScored) {

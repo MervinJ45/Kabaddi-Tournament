@@ -1,10 +1,9 @@
-package Services;
+package services;
 
-import Model.Player;
-import Model.Team;
+import model.Player;
+import model.Team;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 
@@ -12,7 +11,7 @@ public class DisplayStatsServices {
 
     public void displayStandings(ArrayList<Team> teams) {
         System.out.println("Points Table");
-        Collections.sort(teams, new Comparator<Team>() {
+        teams.sort(new Comparator<Team>() {
             @Override
             public int compare(Team t1, Team t2) {
                 if (t1.getTotalPoints() != t2.getTotalPoints()) {
@@ -31,7 +30,7 @@ public class DisplayStatsServices {
 
     public void displayStats(ArrayList<Team> teams) {
         System.out.println("Stats");
-        Player playerWithMostRaidPoints = teams.get(0).getPlayers().get(0);
+        Player playerWithMostRaidPoints = teams.getFirst().getPlayers().getFirst();
         for (Team team : teams) {
             for (Player player : team.getPlayers()) {
                 if (playerWithMostRaidPoints.getRaidPoints() < player.getRaidPoints()) {
@@ -43,7 +42,7 @@ public class DisplayStatsServices {
         System.out.println("Player: " + playerWithMostRaidPoints.getPlayerName());
         System.out.println("Points: " + playerWithMostRaidPoints.getRaidPoints());
 
-        Player playerWithMostTacklePoints = teams.get(0).getPlayers().get(0);
+        Player playerWithMostTacklePoints = teams.getFirst().getPlayers().getFirst();
         for (Team team : teams) {
             for (Player player : team.getPlayers()) {
                 if (playerWithMostRaidPoints.getTacklePoints() < player.getTacklePoints()) {

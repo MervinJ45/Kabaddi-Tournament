@@ -1,8 +1,8 @@
-package Services;
+package services;
 
-import Model.*;
+import model.*;
 
-public class MatchServices {
+public class FinalMatchServices implements MatchServices {
 
     PlayerServices playerServices = new PlayerServices();
     TeamServices teamServices = new TeamServices();
@@ -59,8 +59,8 @@ public class MatchServices {
             teamServices.recordWin(teamA, pointDiff);
             teamServices.recordLoss(teamB, pointDiff);
         } else {
-            teamServices.recordTie(teamA);
-            teamServices.recordTie(teamB);
+//            teamServices.recordTie(teamA);
+//            teamServices.recordTie(teamB);
         }
     }
 
@@ -79,4 +79,16 @@ public class MatchServices {
         System.out.println("Winner : " + winner);
         System.out.println("----------");
     }
+
+//    public void addGoldenRaid(Match match, RaidOutCome raidOutCome, String raidingTeam, int pointsScored, Player pointScorer){
+//        Raid goldenRaid = new Raid(0, raidOutCome, raidingTeam, pointsScored, pointScorer);
+//        calculateGoldenRaidResults(match, goldenRaid);
+//    }
+
+//    public void calculateGoldenRaidResults(Raid goldenRaid){
+//        if(goldenRaid.getRaidOutCome() == RaidOutCome.successfull){
+//
+//        }
+//    }
+
 }
