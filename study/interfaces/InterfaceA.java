@@ -1,4 +1,4 @@
-package study;
+package study.interfaces;
 
 public interface InterfaceA {
     public static final int a = 10;

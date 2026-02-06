@@ -1,4 +1,4 @@
-package study;
+package study.abstractclasses;
 
 public class ClassBB extends AbstractClassA {
     public static void main(String[] args) {

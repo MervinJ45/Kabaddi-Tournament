@@ -1,4 +1,4 @@
-package study;
+package study.interfaces;
 
 public class ClassA implements InterfaceA, InterfaceB {
 
