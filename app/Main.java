@@ -19,37 +19,37 @@ public class Main {
 
         pklServices.displayTeams(pkl);
 
-        teamServices.createPlayers(uMumba, "Ajith Chauhan", Role.raider, uMumba.getTeamName());
-        teamServices.createPlayers(uMumba, "Sandeep Kumar", Role.raider, uMumba.getTeamName());
-        teamServices.createPlayers(uMumba, "Amir Mohammed Zafardanish", Role.raider, uMumba.getTeamName());
-        teamServices.createPlayers(uMumba, "Sunil Kumar", Role.defender, uMumba.getTeamName());
-        teamServices.createPlayers(uMumba, "Parvesh Bainswal", Role.defender, uMumba.getTeamName());
-        teamServices.createPlayers(uMumba, "Lokesh Goswami", Role.defender, uMumba.getTeamName());
-        teamServices.createPlayers(uMumba, "Rinku Sharma", Role.defender, uMumba.getTeamName());
+        teamServices.createPlayers(uMumba, "Ajith Chauhan", Role.RAIDER, uMumba.getTeamName());
+        teamServices.createPlayers(uMumba, "Sandeep Kumar", Role.RAIDER, uMumba.getTeamName());
+        teamServices.createPlayers(uMumba, "Amir Mohammed Zafardanish", Role.RAIDER, uMumba.getTeamName());
+        teamServices.createPlayers(uMumba, "Sunil Kumar", Role.DEFENDER, uMumba.getTeamName());
+        teamServices.createPlayers(uMumba, "Parvesh Bainswal", Role.DEFENDER, uMumba.getTeamName());
+        teamServices.createPlayers(uMumba, "Lokesh Goswami", Role.DEFENDER, uMumba.getTeamName());
+        teamServices.createPlayers(uMumba, "Rinku Sharma", Role.DEFENDER, uMumba.getTeamName());
 
-        teamServices.createPlayers(dabangDelhi, "Ashu Malik", Role.raider, dabangDelhi.getTeamName());
-        teamServices.createPlayers(dabangDelhi, "Neeraj Narwal", Role.raider, dabangDelhi.getTeamName());
-        teamServices.createPlayers(dabangDelhi, "Ajinkya Pawar", Role.raider, dabangDelhi.getTeamName());
-        teamServices.createPlayers(dabangDelhi, "Mohit Narwal", Role.defender, dabangDelhi.getTeamName());
-        teamServices.createPlayers(dabangDelhi, "Surjeet Singh", Role.defender, dabangDelhi.getTeamName());
-        teamServices.createPlayers(dabangDelhi, "Sharaub Nandhal", Role.defender, dabangDelhi.getTeamName());
-        teamServices.createPlayers(dabangDelhi, "Fazel Atrachali", Role.defender, dabangDelhi.getTeamName());
+        teamServices.createPlayers(dabangDelhi, "Ashu Malik", Role.RAIDER, dabangDelhi.getTeamName());
+        teamServices.createPlayers(dabangDelhi, "Neeraj Narwal", Role.RAIDER, dabangDelhi.getTeamName());
+        teamServices.createPlayers(dabangDelhi, "Ajinkya Pawar", Role.RAIDER, dabangDelhi.getTeamName());
+        teamServices.createPlayers(dabangDelhi, "Mohit Narwal", Role.DEFENDER, dabangDelhi.getTeamName());
+        teamServices.createPlayers(dabangDelhi, "Surjeet Singh", Role.DEFENDER, dabangDelhi.getTeamName());
+        teamServices.createPlayers(dabangDelhi, "Sharaub Nandhal", Role.DEFENDER, dabangDelhi.getTeamName());
+        teamServices.createPlayers(dabangDelhi, "Fazel Atrachali", Role.DEFENDER, dabangDelhi.getTeamName());
 
-        teamServices.createPlayers(teluguTitans, "Vijay Malik", Role.raider, teluguTitans.getTeamName());
-        teamServices.createPlayers(teluguTitans, "Bharath Hooda", Role.raider, teluguTitans.getTeamName());
-        teamServices.createPlayers(teluguTitans, "Chetan Sahu", Role.raider, teluguTitans.getTeamName());
-        teamServices.createPlayers(teluguTitans, "Abi Duhan", Role.defender, teluguTitans.getTeamName());
-        teamServices.createPlayers(teluguTitans, "Ajith Pawar", Role.defender, teluguTitans.getTeamName());
-        teamServices.createPlayers(teluguTitans, "Shubam Shinde", Role.defender, teluguTitans.getTeamName());
-        teamServices.createPlayers(teluguTitans, "Ankit Jaglan", Role.defender, teluguTitans.getTeamName());
+        teamServices.createPlayers(teluguTitans, "Vijay Malik", Role.RAIDER, teluguTitans.getTeamName());
+        teamServices.createPlayers(teluguTitans, "Bharath Hooda", Role.RAIDER, teluguTitans.getTeamName());
+        teamServices.createPlayers(teluguTitans, "Chetan Sahu", Role.RAIDER, teluguTitans.getTeamName());
+        teamServices.createPlayers(teluguTitans, "Abi Duhan", Role.DEFENDER, teluguTitans.getTeamName());
+        teamServices.createPlayers(teluguTitans, "Ajith Pawar", Role.DEFENDER, teluguTitans.getTeamName());
+        teamServices.createPlayers(teluguTitans, "Shubam Shinde", Role.DEFENDER, teluguTitans.getTeamName());
+        teamServices.createPlayers(teluguTitans, "Ankit Jaglan", Role.DEFENDER, teluguTitans.getTeamName());
 
-        teamServices.createPlayers(tamilThalaivas, "Narendhar kandola", Role.raider, tamilThalaivas.getTeamName());
-        teamServices.createPlayers(tamilThalaivas, "Arjun Deshwal", Role.raider, tamilThalaivas.getTeamName());
-        teamServices.createPlayers(tamilThalaivas, "Pawan Sherawath", Role.raider, tamilThalaivas.getTeamName());
-        teamServices.createPlayers(tamilThalaivas, "Ronak", Role.defender, tamilThalaivas.getTeamName());
-        teamServices.createPlayers(tamilThalaivas, "Aashik", Role.defender, tamilThalaivas.getTeamName());
-        teamServices.createPlayers(tamilThalaivas, "Sagar Rathee", Role.defender, tamilThalaivas.getTeamName());
-        teamServices.createPlayers(tamilThalaivas, "Nithesh Kumar", Role.defender, tamilThalaivas.getTeamName());
+        teamServices.createPlayers(tamilThalaivas, "Narendhar kandola", Role.RAIDER, tamilThalaivas.getTeamName());
+        teamServices.createPlayers(tamilThalaivas, "Arjun Deshwal", Role.RAIDER, tamilThalaivas.getTeamName());
+        teamServices.createPlayers(tamilThalaivas, "Pawan Sherawath", Role.RAIDER, tamilThalaivas.getTeamName());
+        teamServices.createPlayers(tamilThalaivas, "Ronak", Role.DEFENDER, tamilThalaivas.getTeamName());
+        teamServices.createPlayers(tamilThalaivas, "Aashik", Role.DEFENDER, tamilThalaivas.getTeamName());
+        teamServices.createPlayers(tamilThalaivas, "Sagar Rathee", Role.DEFENDER, tamilThalaivas.getTeamName());
+        teamServices.createPlayers(tamilThalaivas, "Nithesh Kumar", Role.DEFENDER, tamilThalaivas.getTeamName());
 
         teamServices.displayPlayers(uMumba);
         teamServices.displayPlayers(dabangDelhi);
@@ -57,12 +57,12 @@ public class Main {
         teamServices.displayPlayers(tamilThalaivas);
 
         Match match1 = pklServices.createMatch(pkl,uMumba, dabangDelhi);
-        leagueMatchServices.addRaid(match1, RaidOutCome.successfull, "U Mumba", 4, teamServices.getPlayerByName(uMumba, "Ajith Chauhan"));
-        leagueMatchServices.addRaid(match1, RaidOutCome.successfull, "Dabang Delhi KC", 5, teamServices.getPlayerByName(dabangDelhi, "Ashu Malik"));
-        leagueMatchServices.addRaid(match1, RaidOutCome.successfull, "U Mumba", 2, teamServices.getPlayerByName(uMumba, "Sandeep Kumar"));
-        leagueMatchServices.addRaid(match1, RaidOutCome.successfull, "Dabang Delhi KC", 2, teamServices.getPlayerByName(dabangDelhi, "Neeraj Narwal"));
-        leagueMatchServices.addRaid(match1, RaidOutCome.successfull, "U Mumba", 1, teamServices.getPlayerByName(uMumba, "Amir Mohammed Zafardanish"));
-        leagueMatchServices.addRaid(match1, RaidOutCome.unsuccessfull, "Dabang Delhi KC", 1, teamServices.getPlayerByName(uMumba, "Sunil Kumar"));
+        leagueMatchServices.addRaid(match1, RaidOutCome.SUCCESSFULL, "U Mumba", 4, teamServices.getPlayerByName(uMumba, "Ajith Chauhan"));
+        leagueMatchServices.addRaid(match1, RaidOutCome.SUCCESSFULL, "Dabang Delhi KC", 5, teamServices.getPlayerByName(dabangDelhi, "Ashu Malik"));
+        leagueMatchServices.addRaid(match1, RaidOutCome.SUCCESSFULL, "U Mumba", 2, teamServices.getPlayerByName(uMumba, "Sandeep Kumar"));
+        leagueMatchServices.addRaid(match1, RaidOutCome.SUCCESSFULL, "Dabang Delhi KC", 2, teamServices.getPlayerByName(dabangDelhi, "Neeraj Narwal"));
+        leagueMatchServices.addRaid(match1, RaidOutCome.SUCCESSFULL, "U Mumba", 1, teamServices.getPlayerByName(uMumba, "Amir Mohammed Zafardanish"));
+        leagueMatchServices.addRaid(match1, RaidOutCome.UNSUCCESSFULL, "Dabang Delhi KC", 1, teamServices.getPlayerByName(uMumba, "Sunil Kumar"));
         leagueMatchServices.endMatch(match1);
 
         displayStandingsServices.displayStandings(pkl.getTeams());

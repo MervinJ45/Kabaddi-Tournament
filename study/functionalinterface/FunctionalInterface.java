@@ -7,10 +7,11 @@ public interface FunctionalInterface {
     //int sub();
 
     //multiple default and static methods are allowed
-    default void printDefault(int a,int b){
+    default void printDefault(int a, int b) {
         System.out.println("default");
     }
-    static void printStatic(int a,int b){
+
+    static void printStatic(int a, int b) {
         System.out.println("static");
     }
 }

@@ -14,7 +14,7 @@ public class ClassA implements InterfaceA, InterfaceB {
     @Override
     //overriding default method(avail in both implemented interfaces)
     public void print() {
-        //accessing default methods
+        //accessing default methods available in both implemented interfaces
         InterfaceA.super.print();
         InterfaceB.super.print();
         //accessing static methods in interface

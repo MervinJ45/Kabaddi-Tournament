@@ -10,9 +10,9 @@ public class FinalMatchServices implements MatchServices {
     public void addRaid(Match match, RaidOutCome raidOutCome, String raidingTeam, int pointsScored, Player pointScorer) {
         Raid raid = new Raid(match.getRaids().size() + 1, raidOutCome, raidingTeam, pointsScored, pointScorer);
         match.getRaids().add(raid);
-        if (raidOutCome == RaidOutCome.successfull) {
+        if (raidOutCome == RaidOutCome.SUCCESSFULL) {
             playerServices.increaseRaidPoint(pointScorer, pointsScored);
-        } else if (raidOutCome == RaidOutCome.unsuccessfull) {
+        } else if (raidOutCome == RaidOutCome.UNSUCCESSFULL) {
             playerServices.increaseTacklePoint(pointScorer, pointsScored);
         }
     }
@@ -31,13 +31,13 @@ public class FinalMatchServices implements MatchServices {
         String teamBName = teamB.getTeamName();
         for (Raid raid : match.getRaids()) {
             String raidingTeam = raid.getRaidingTeam();
-            if (raid.getRaidOutCome() == RaidOutCome.successfull) {
+            if (raid.getRaidOutCome() == RaidOutCome.SUCCESSFULL) {
                 if (teamAName.equals(raidingTeam)) {
                     match.setTeamAPoints(match.getTeamAPoints() + raid.getPointsScored());
                 } else {
                     match.setTeamBPoints(match.getTeamBPoints() + raid.getPointsScored());
                 }
-            } else if (raid.getRaidOutCome() == RaidOutCome.unsuccessfull) {
+            } else if (raid.getRaidOutCome() == RaidOutCome.UNSUCCESSFULL) {
                 if (teamAName.equals(raidingTeam)) {
                     match.setTeamBPoints(match.getTeamBPoints() + raid.getPointsScored());
                 } else {
@@ -86,7 +86,7 @@ public class FinalMatchServices implements MatchServices {
 //    }
 
 //    public void calculateGoldenRaidResults(Raid goldenRaid){
-//        if(goldenRaid.getRaidOutCome() == RaidOutCome.successfull){
+//        if(goldenRaid.getRaidOutCome() == RaidOutCome.SUCCESSFULL){
 //
 //        }
 //    }
