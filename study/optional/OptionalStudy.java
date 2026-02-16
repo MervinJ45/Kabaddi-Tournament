@@ -63,24 +63,24 @@ public class OptionalStudy {
         );
         String[] arr = new String[]{"Rohit", null, "Virat", "Rahul"};
         //.map will perform the operation only on not null values
-        for(int i=0;i<arr.length;i++){
-            Optional<String> player = Optional.ofNullable(arr[i]);
-            Optional<Integer> length = player.map(p->p.length());
+        for (String s : arr) {
+            Optional<String> player = Optional.ofNullable(s);
+            Optional<Integer> length = player.map(p -> p.length());
             System.out.println(length);
         }
         //flatMap is used when the function performed will already return an Optional
-        for(int i=0;i<arr.length;i++){
-            Optional<String> player = Optional.ofNullable(arr[i]);
-            Optional<String> playerUpper = player.flatMap(p->Optional.of(p.toUpperCase()));
+        for (String s : arr) {
+            Optional<String> player = Optional.ofNullable(s);
+            Optional<String> playerUpper = player.flatMap(p -> Optional.of(p.toUpperCase()));
             System.out.println(playerUpper);
         }
         //filter return empty Optional if the condition is not met or the Optional itself
         String[] filteredArr = new String[arr.length];
         int z=0;
-        for(int i=0;i<arr.length;i++){
-            Optional<String> player = Optional.ofNullable(arr[i]);
-            Optional<String> filtered = player.filter(p->p.startsWith("R"));
-            if(filtered.isPresent()){
+        for (String s : arr) {
+            Optional<String> player = Optional.ofNullable(s);
+            Optional<String> filtered = player.filter(p -> p.startsWith("R"));
+            if (filtered.isPresent()) {
                 filteredArr[z++] = filtered.get();
             }
         }

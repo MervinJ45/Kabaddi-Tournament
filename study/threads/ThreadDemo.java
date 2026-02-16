@@ -14,7 +14,7 @@ public class ThreadDemo {
         thread.start();
         System.out.println("Main Thread");
         try {
-            //.join() make the current thread to wait for the other thread to completes its exception
+            //.join() make the current thread to wait for the other thread to completes their execution
             thread.join();
         } catch (InterruptedException e) {
             System.out.println("Main Thread Interrupted");

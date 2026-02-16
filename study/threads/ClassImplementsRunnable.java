@@ -4,13 +4,13 @@ class NewThread2 implements Runnable {
     public void run() {
         for (int i = 0; i < 5; i++) {
             System.out.println(i + " Slept New Thread");
-            //should be surrounded by a exception handler
+            //should be surrounded by an exception handler
             try {
                 //makes the thread execution waiting for specified milliseconds
                 //will throw exception when the thread is interrupted by another thread
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
-                return;
+                System.out.println("Interrupted");
             }
         }
     }

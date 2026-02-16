@@ -8,7 +8,7 @@ public class ThreadCounters {
     }
 
     //made the counter thread safe using synchronized keyword
-    //synchronized will make sure only one thread can access a specific block or method at a timw
+    //synchronized will make sure only one thread can access a specific block or method at a time
     public synchronized void increment() {
         c += 2;
         //will notify all the threads in waiting state to check the condition again

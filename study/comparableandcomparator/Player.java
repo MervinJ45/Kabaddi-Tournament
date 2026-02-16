@@ -25,7 +25,7 @@ public class Player implements Comparable<Player> {
         this.runs = runs;
         this.age = age;
     }
-    //in comparable the sorting logic is defined inside the class itself (override the compareTo())
+    //in comparable the sorting logic is defined inside the class itself
     @Override
     public int compareTo(Player p){
         //descending order
@@ -33,9 +33,9 @@ public class Player implements Comparable<Player> {
     }
     public static void main(String[] args){
         ArrayList<Player> players = new ArrayList<>();
-        Player player1 = new Player("Rohit",450,38);
-        Player player2 = new Player("Virat",430,37);
-        Player player3 = new Player("Dhoni",133,44);
+        Player player1 = new Player("Rohit",333,38);
+        Player player2 = new Player("Virat",222,37);
+        Player player3 = new Player("Dhoni",111,44);
         players.add(player1);
         players.add(player2);
         players.add(player3);

@@ -13,7 +13,7 @@ class NewThread1 extends Thread {
                 }
             }
         } catch (InterruptedException e) {
-            return;
+            System.out.println("Interrupted");
         }
 
     }
