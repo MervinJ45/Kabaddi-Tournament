@@ -17,8 +17,8 @@ public class ReflectionAndAnnotation {
         //getting a default constructor using annotation
         Constructor<?> defaultConst = null;
         Constructor[] constructors = playerClass.getDeclaredConstructors();
-        for(Constructor constructor: constructors){
-            if(constructor.isAnnotationPresent(DefaultConstructor.class)){
+        for (Constructor constructor : constructors) {
+            if (constructor.isAnnotationPresent(DefaultConstructor.class)) {
                 defaultConst = constructor;
             }
         }
@@ -47,23 +47,23 @@ public class ReflectionAndAnnotation {
         }
 
         //setting values of field using annotation
-        for(Field field: fields){
-            if(field.isAnnotationPresent(Name.class)){
+        for (Field field : fields) {
+            if (field.isAnnotationPresent(Name.class)) {
                 field.set(sky, "Surya Kumar Yadav");
             }
-            if(field.isAnnotationPresent(Age.class)){
+            if (field.isAnnotationPresent(Age.class)) {
                 field.set(sky, 35);
             }
         }
         System.out.println(sky);
 
         //invoking methods with annotation
-        for(Method method: methods){
-            if(method.isAnnotationPresent(SetNameMethod.class)){
-                method.invoke(bumrah,"Jasprit Bumrah");
+        for (Method method : methods) {
+            if (method.isAnnotationPresent(SetNameMethod.class)) {
+                method.invoke(bumrah, "Jasprit Bumrah");
             }
-            if(method.isAnnotationPresent(SetAgeMethod.class)){
-                method.invoke(bumrah,32);
+            if (method.isAnnotationPresent(SetAgeMethod.class)) {
+                method.invoke(bumrah, 32);
             }
         }
         System.out.println(bumrah);

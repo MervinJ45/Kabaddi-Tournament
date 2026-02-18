@@ -13,7 +13,7 @@ public class Player {
     private int playerAge;
 
     @DefaultConstructor
-    Player(){
+    Player() {
 
     }
 
