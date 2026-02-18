@@ -25,7 +25,7 @@ public class Reflections {
         Method[] methods = playerClass.getDeclaredMethods();
         for (Method method : methods) {
             //method invoked using reflection
-            if(method.getName().equals("methodToInvoke")){
+            if (method.getName().equals("methodToInvoke")) {
                 //System.out.println(method.invoke(player));
             }
             //System.out.println(method);
@@ -62,23 +62,23 @@ public class Reflections {
             //System.out.println(annotation);
         }
         //setting field values of an object using reflection
-        for(Field field: fields){
-            if (field.getName().equals("playerName")){
-                field.set(dhoni,"Dhoni");
+        for (Field field : fields) {
+            if (field.getName().equals("playerName")) {
+                field.set(dhoni, "Dhoni");
             }
-            if(field.getName().equals("playerAge")){
+            if (field.getName().equals("playerAge")) {
                 field.set(dhoni, 44);
             }
         }
         System.out.println(dhoni);
 
         //setting values to object using setters methods
-        for(Method method: methods){
-            if(method.getName().equals("setPlayerName")){
-                method.invoke(rahul,"Rahul");
+        for (Method method : methods) {
+            if (method.getName().equals("setPlayerName")) {
+                method.invoke(rahul, "Rahul");
             }
-            if(method.getName().equals("setPlayerAge")){
-                method.invoke(rahul,33);
+            if (method.getName().equals("setPlayerAge")) {
+                method.invoke(rahul, 33);
             }
         }
         System.out.println(rahul);
