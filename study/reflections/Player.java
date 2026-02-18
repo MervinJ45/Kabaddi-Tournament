@@ -1,15 +1,21 @@
 package study.reflections;
 
-import study.annotations.AgeRange;
-import study.annotations.RunMe;
+import study.annotations.*;
 
 public class Player {
+    @Name
     private String playerName;
+    @Age
     @AgeRange(
             min = 18,
             max = 42
     )
     private int playerAge;
+
+    @DefaultConstructor
+    Player(){
+
+    }
 
     Player(String playerName, int playerAge) {
         this.playerName = playerName;
@@ -20,6 +26,7 @@ public class Player {
         return playerName;
     }
 
+    @SetNameMethod
     public void setPlayerName(String playerName) {
         this.playerName = playerName;
     }
@@ -28,6 +35,7 @@ public class Player {
         return playerAge;
     }
 
+    @SetAgeMethod
     public void setPlayerAge(int playerAge) {
         this.playerAge = playerAge;
     }

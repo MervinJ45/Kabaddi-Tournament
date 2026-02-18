@@ -1,7 +1,6 @@
 package study.reflections;
 
-import study.annotations.AgeRange;
-import study.annotations.RunMe;
+import study.annotations.*;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -14,6 +13,17 @@ public class ReflectionAndAnnotation {
         Constructor<?> playerConst = playerClass.getDeclaredConstructor(String.class, int.class);
         Object virat = playerConst.newInstance("Virat", 37);
         Field[] fields = playerClass.getDeclaredFields();
+
+        //getting a default constructor using annotation
+        Constructor<?> defaultConst = null;
+        Constructor[] constructors = playerClass.getDeclaredConstructors();
+        for(Constructor constructor: constructors){
+            if(constructor.isAnnotationPresent(DefaultConstructor.class)){
+                defaultConst = constructor;
+            }
+        }
+        Object sky = defaultConst.newInstance();
+        Object bumrah = defaultConst.newInstance();
 
         //validate age of a player using reflection and annotation
         for (Field field : fields) {
@@ -35,5 +45,27 @@ public class ReflectionAndAnnotation {
                 System.out.println(method.invoke(virat));
             }
         }
+
+        //setting values of field using annotation
+        for(Field field: fields){
+            if(field.isAnnotationPresent(Name.class)){
+                field.set(sky, "Surya Kumar Yadav");
+            }
+            if(field.isAnnotationPresent(Age.class)){
+                field.set(sky, 35);
+            }
+        }
+        System.out.println(sky);
+
+        //invoking methods with annotation
+        for(Method method: methods){
+            if(method.isAnnotationPresent(SetNameMethod.class)){
+                method.invoke(bumrah,"Jasprit Bumrah");
+            }
+            if(method.isAnnotationPresent(SetAgeMethod.class)){
+                method.invoke(bumrah,32);
+            }
+        }
+        System.out.println(bumrah);
     }
 }
