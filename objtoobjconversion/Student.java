@@ -3,14 +3,18 @@ package objtoobjconversion;
 import study.annotations.*;
 
 public class Student {
-    @FieldOf(value = "name")
+    @FieldOf(value = "Name")
     private String name;
-    @FieldOf(value = "age")
+    @FieldOf(value = "Age")
     private int age;
-    @FieldOf(value = "mobileNumber")
+    @FieldOf(value = "MobileNumber")
     private String mobileNumber;
-    @FieldOf(value = "address")
+    @FieldOf(value = "Address")
     private Address address;
+
+    public Student() {
+
+    }
 
     public Student(String name, int age, String mobileNumber, Address address) {
         this.name = name;

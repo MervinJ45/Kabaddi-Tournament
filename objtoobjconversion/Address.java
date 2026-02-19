@@ -13,36 +13,36 @@ public class Address {
         this.stateName = stateName;
     }
 
-    public void setHouseNo(int houseNo) {
-        this.houseNo = houseNo;
-    }
-
-    public void setStreetName(String streetName) {
-        this.streetName = streetName;
-    }
-
-    public void setDistrictName(String districtName) {
-        this.districtName = districtName;
-    }
-
-    public void setStateName(String stateName) {
-        this.stateName = stateName;
-    }
-
     public int getHouseNo() {
         return houseNo;
+    }
+
+    public void setHouseNo(int houseNo) {
+        this.houseNo = houseNo;
     }
 
     public String getStreetName() {
         return streetName;
     }
 
+    public void setStreetName(String streetName) {
+        this.streetName = streetName;
+    }
+
     public String getDistrictName() {
         return districtName;
     }
 
+    public void setDistrictName(String districtName) {
+        this.districtName = districtName;
+    }
+
     public String getStateName() {
         return stateName;
+    }
+
+    public void setStateName(String stateName) {
+        this.stateName = stateName;
     }
 
     @Override
@@ -54,4 +54,5 @@ public class Address {
                 ", stateName='" + stateName + '\'' +
                 '}';
     }
+
 }
